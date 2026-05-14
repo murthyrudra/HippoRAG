@@ -19,7 +19,7 @@ def _get_embedding_model_class(embedding_model_name: str = "nvidia/NV-Embed-v2")
         return NVEmbedV2EmbeddingModel
     elif "contriever" in embedding_model_name:
         return ContrieverModel
-    elif "text-embedding" in embedding_model_name:
+    elif "text-embedding" in embedding_model_name or "granite" in embedding_model_name:
         return OpenAIEmbeddingModel
     elif "cohere" in embedding_model_name:
         return CohereEmbeddingModel
